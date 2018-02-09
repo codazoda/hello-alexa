@@ -13,4 +13,4 @@ $alexaRequest = json_decode( $post );
 $result = array(
 	"status" => "success"
 );
-echo $result;
+echo json_encode($result);

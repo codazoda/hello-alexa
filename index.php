@@ -34,7 +34,7 @@ $response = [
 ];
 
 // Setup a JSON response header
-header('Content-Type: application/json');=
+header('Content-Type: application/json');
 
 // Return the output
 echo json_encode($response);

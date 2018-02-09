@@ -8,3 +8,9 @@ $alexaRequest = json_decode( $post );
 
 // Throw it in a debug log file that anyone can view
 file_put_contents('./debug.log', $alexaRequest);
+
+// Send some output
+$result = array(
+	"status" => "success"
+);
+echo $result;

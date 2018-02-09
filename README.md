@@ -2,6 +2,14 @@
 
 This is test code for our company D3 event 2018. The plan is to write a super simple Alexa Skill as an example.
 
+
+## Prompts
+
+_Alexa, Ask D3 to run a test_
+
+
+## Notes
+
 This code is served from the following URL.
 
 https://www.joeldare.com/d3test/

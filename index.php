@@ -13,8 +13,28 @@ $alexaRequest = json_decode($postData);
 // Throw it in a debug log file that anyone can view
 file_put_contents('debug.log', $postData);
 
-// Send some output
-$result = array(
-	"status" => "success"
-);
-echo json_encode($result);
+// TODO: Verify the session.application.applicationId
+
+// TODO: Look at the session.request.intent.name
+//switch($intent) {
+//	'RunTest':
+//		runTestIntent();
+//	default:
+//		unknownIntent();
+//}
+
+$response = [
+	"response" => [
+		"outputSpeech" => [
+			"type" => "PlainText",
+			"text" => "Plain text string to speak",
+			"ssml" => "<speak>Hello. This is the D3 test skill.</speak>"
+		]
+	]
+];
+
+// Setup a JSON response header
+header('Content-Type: application/json');=
+
+// Return the output
+echo json_encode($response);

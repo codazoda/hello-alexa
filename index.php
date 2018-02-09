@@ -26,8 +26,7 @@ file_put_contents('debug.log', $postData);
 $response = [
 	"response" => [
 		"outputSpeech" => [
-			"type" => "PlainText",
-			"text" => "Plain text string to speak",
+			"type" => "SSML",
 			"ssml" => "<speak>Hello. This is the D3 test skill.</speak>"
 		]
 	]

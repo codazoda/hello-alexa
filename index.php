@@ -17,7 +17,7 @@ $alexaRequest = json_decode($postData);
 // Verify the application ID
 //if ($alexaRequest['session']['application']['applicationId'] === $validAppId) {
 
-	if ($alexaRequest['session']['application']['applicationId'] === $validAppId) {
+	if ($alexaRequest->session->application->applicationId === $validAppId) {
 		$appIdResult = "ID's matched.";
 	} else {
 		$appIdResult = "ID's did not match.";

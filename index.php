@@ -15,13 +15,7 @@ $postData = file_get_contents( 'php://input' );
 $alexaRequest = json_decode($postData);
 
 // Verify the application ID
-//if ($alexaRequest['session']['application']['applicationId'] === $validAppId) {
-
-	if ($alexaRequest->session->application->applicationId === $validAppId) {
-		$appIdResult = "ID's matched.";
-	} else {
-		$appIdResult = "ID's did not match.";
-	}
+if ($alexaRequest->session->application->applicationId === $validAppId) {
 
 	// TODO: Look at the session.request.intent.name
 
@@ -30,7 +24,7 @@ $alexaRequest = json_decode($postData);
 		"response" => [
 			"outputSpeech" => [
 				"type" => "SSML",
-				"ssml" => "<speak>Hello. This is the D3 test skill. {$appIdResult}</speak>"
+				"ssml" => "<speak>Hello. This is the D3 test skill. ID's matched so we're ready to go.</speak>"
 			]
 		]
 	];
@@ -41,4 +35,4 @@ $alexaRequest = json_decode($postData);
 	// Return the output
 	echo json_encode($response);
 
-//}
+}

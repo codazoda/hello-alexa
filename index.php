@@ -1,7 +1,7 @@
 <?php
 
-// Setup the app id
-$validAppId = ''; // TODO: Put your app ID here
+// TODO: Enter your app ID here (see README.md)
+$validAppId = '';
 
 // Get raw POST data
 $postData = file_get_contents( 'php://input' );

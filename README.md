@@ -1,23 +1,25 @@
-# D3 Test
+# Hello Alexa
 
-This is test code for our company D3 event 2018. The plan is to write a super simple Alexa Skill as an example.
+A super simple Alexa Skill written in PHP. You'll say a command like:
 
+_Alexa, Ask hello to say hi_
 
-## Prompts
+Your command will vary slightly based on the settings you choose when you add the skill to the Amazon Developer Tools. The format is the following.
 
-_Alexa, Ask D3 to run a test_
+_Alexa, Ask [skill name] to [in name]_
 
+## Adding your skill to Amazon
 
-## Notes
+There's a GUI for this. A lot of the language is confusing at first. Relax and take your time. Here are the basic steps as of this writing.
 
-This code is served from the following URL.
-
-https://www.joeldare.com/d3test/
-
-Each request's post data is logged to the following debug file.
-
-https://www.joeldare.com/d3test/debug.log
-
-Run this on the server to pull every 15 seconds while we're working.
-
-`watch -n15 "git pull"`
+- Go to https://developer.amazon.com
+- Select the _Alexa_ tab
+- Click _Get Started_ under _Alexa Skills Kit_
+- Add a New Skill
+- Under _Skill Information_ enter a _Name_ of `Hello` and a _Invocation Name_ of `hello`
+- Create the _Interaction Model_ using the _Skill Builder_ (beta currently)
+- Add a new _Intent_ called _hi_
+- Add a _Sample Udderance_ of `ask hello to say hi`
+- Click the _Build Model_ button
+- Under _Configuration_ choose _HTTPS_ and enter your skill URL under _Default_
+- Test your skill in the Test Simulator (it must be on an internet available server with HTTPS)

@@ -17,7 +17,7 @@ if ($alexaRequest->session->application->applicationId === $validAppId) {
 		"response" => [
 			"outputSpeech" => [
 				"type" => "PlainText",
-				"text" => "Hello Alexa"
+				"text" => "Hi, I'm Alexa."
 			]
 		]
 	];

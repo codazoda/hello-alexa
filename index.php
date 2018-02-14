@@ -1,12 +1,7 @@
 <?php
 
-// Turn on all error reporting
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-// Setup some variables
-$validAppId = 'amzn1.ask.skill.018d063b-19dc-4a21-976b-1f5b635140e2';
+// Setup the app id
+$validAppId = ''; // TODO: Put your app ID here
 
 // Get raw POST data
 $postData = file_get_contents( 'php://input' );
@@ -17,14 +12,12 @@ $alexaRequest = json_decode($postData);
 // Verify the application ID
 if ($alexaRequest->session->application->applicationId === $validAppId) {
 
-	// TODO: Look at the session.request.intent.name
-
 	// Setup a response
 	$response = [
 		"response" => [
 			"outputSpeech" => [
-				"type" => "SSML",
-				"ssml" => "<speak>Hello. This is the D3 test skill. ID's matched so we're ready to go.</speak>"
+				"type" => "PlainText",
+				"text" => "Hello Alexa"
 			]
 		]
 	];

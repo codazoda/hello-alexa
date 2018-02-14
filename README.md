@@ -6,7 +6,7 @@ _Alexa, Ask hello to say hi_
 
 Your command will vary slightly based on the settings you choose when you add the skill to the Amazon Developer Tools. The format is the following.
 
-_Alexa, Ask [skill name] to [in name]_
+_Alexa, Ask [skill name] to [intent name]_
 
 ## Adding your skill to Amazon
 
